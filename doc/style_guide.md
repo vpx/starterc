@@ -8,7 +8,7 @@
   - [Characters Per Line](#characters-per-line)
   - [Empty Lines](#empty-lines)
   - [Indentation](#indentation)
-  - [Single Line Rules](#single-line-rules)
+  - [Content Break](#content-break)
   - [Spaces](#spaces)
 - [Naming](#naming)
   - [Case](#case)
@@ -25,10 +25,19 @@
 
 ### Alignment
 
-Always break curly brackets:
+Always attach braces to surrounding context.
 
 ```c
 // Good
+void foo() {
+    int number = 10;
+
+    if (number == 5) {
+        return;
+    }
+}
+
+// Bad
 void foo()
 {
     int number = 10;
@@ -39,31 +48,35 @@ void foo()
     }
 }
 
-// Bad
-void foo() {
-    int number = 10;
+// Good
+typedef struct {
+    int a;
+    int b;
+} type_t;
 
-    if (number == 5) {
-        return;
-    }
-}
+// Bad
+typedef struct
+{
+    int a;
+    int b;
+} type_t;
 ```
 
 If the code inside round brackets doesn't fit in a line, break each argument/parameter onto a new line and break the closing bracket.
 
 ```c
 // Doesn't fit in a line, break
-void function_one(
+int function_one(
     unsigned int value_one,
     unsigned int value_two,
     unsigned int value_three
-)
-{
+) {
+    return value_one + value_two + value_three;
 }
 
 // Fits in a line, don't break
-void function_two(unsigned int value)
-{
+void function_two(unsigned int value) {
+    return value_one + value_two + value_three;
 }
 
 int main()
@@ -109,8 +122,7 @@ Always use brackets, even for short statements.
 
 ```c
 // Good
-for (size_t i = 0; i < 100; ++i)
-{
+for (size_t i = 0; i < 100; ++i) {
     puts("Hello world!");
 }
 
@@ -124,8 +136,7 @@ for (size_t i = 0; i < 100; ++i)
 Each line must have a maximum of `80` characters.
 
 ```c
-int main()
-{
+int main() {
     int very_long_variable_name1 = 1;
     int very_long_variable_name2 = 1;
     int very_long_variable_name3 = 1;
@@ -142,8 +153,7 @@ int main()
 Maximum empty lines to keep: `1`.
 
 ```c
-int main()
-{
+int main() {
     // Good
     int my_variable1;
 
@@ -162,12 +172,10 @@ int main()
 Don't use tabs; use `4` spaces for indenting your code.
 
 ```c
-int main()
-{
+int main() {
     int random_variable = 10;
 
-    if (random_variable)
-    {
+    if (random_variable) {
         return 0;
     }
 }
@@ -194,13 +202,11 @@ Don't indent pre-processor directives.
 Don't indent `case` and `default` keywords.
 
 ```c
-int main()
-{
+int main() {
     int random_variable = 10;
 
     // Good
-    switch (random_variable)
-    {
+    switch (random_variable) {
     case 1:
         break;
     default:
@@ -208,8 +214,7 @@ int main()
     }
 
     // Bad
-    switch (random_variable)
-    {
+    switch (random_variable) {
         case 1:
             break;
         default:
@@ -218,29 +223,27 @@ int main()
 }
 ```
 
-### Single Line Rules
+### Content Break
 
-Don't put curly brackes in a single line.
+Always break content inside curly brackets.
 
 ```c
 // Bad
-void empty_function() {}
+void retfunc(int value) { return value }
 
 // Good
-void empty_function()
-{
+void retfunc2(int value) {
+    return value;
 }
 
-int main()
-{
+int main() {
     int random_variable = 10;
 
     // Bad
     if (random_variable == 1) { return; }
 
     // Good
-    if (random_variable == 1)
-    {
+    if (random_variable == 1) {
         return;
     }
 }
@@ -251,36 +254,35 @@ int main()
 Put a space between `for`, `if`, `else if`, and `while` keywords and open brackets.
 
 ```c
-int main()
-{
+int main() {
     // Bad
-    for(int i = 0; i < 100; ++i)
-    {
+    for(int i = 0; i < 100; ++i) {
+        printf("%i\n", i);
     }
 
     // Good
-    for (int i = 0; i < 100; ++i)
-    {
+    for (int i = 0; i < 100; ++i) {
+        printf("%i\n", i);
     }
 
     // Bad
-    while(some_variable)
-    {
+    while(some_variable) {
+        printf("%i\n", some_variable);
     }
 
     // Goood
-    while (some_variable)
-    {
+    while (some_variable) {
+        printf("%i\n", some_variable);
     }
 
     // Bad
-    if(some_variable)
-    {
+    if(some_variable) {
+        printf("%i\n", some_variable);
     }
 
     // Good
-    if (some_variable)
-    {
+    if (some_variable) {
+        printf("%i\n", some_variable);
     }
 }
 ```

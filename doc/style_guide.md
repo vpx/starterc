@@ -412,7 +412,6 @@ Put tags in the following order:
  * @param length The longer side measurement.
  * @param width The shorter side measurement.
  * @return Product of length and width.
- * @throws std::runtime_exception when the length and width are equal.
  */
 float area(float length, float width);
 
@@ -421,7 +420,6 @@ float area(float length, float width);
 /**
  * @brief Calculates the area of a rectangle.
  *
- * @throws std::runtime_exception when the length and width are equal.
  * @param length The longer side measurement.
  * @return Product of length and width.
  * @param width The shorter side measurement.
@@ -465,7 +463,6 @@ float area(float length, float width);
  * @param length The longer side measurement.
  * @param width The shorter side measurement.
  * @return Product of length and width.
- * @throws std::runtime_exception when the length and width are equal.
  */
 float area(float length, float width);
 ```
@@ -482,8 +479,7 @@ End all descriptions with a dot.
  *
  * @param length The longer side measurement.
  * @param width The shorter side measurement.
- * @return Product of length and width.
- * @throws std::runtime_exception when the length and width are equal.
+ * @return Return the product of length and width if succed otherwise -1.
  */
 float area(float length, float width);
 
@@ -495,7 +491,6 @@ float area(float length, float width);
  * @param length The longer side measurement
  * @param width The shorter side measurement
  * @return Product of length and width
- * @throws std::runtime_exception when the length and width are equal
  */
 float area(float length, float width);
 ```
@@ -511,7 +506,6 @@ float area(float length, float width);
  * @param a The first integer to add.
  * @param b The second integer to add.
  * @return The sum of a and b.
- * @throws std::invalid_argument if either parameter is negative.
  * @see subtract() for the inverse operation.
  */
 int add(int a, int b)

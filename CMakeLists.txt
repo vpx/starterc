@@ -6,5 +6,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(src/)
 
+option(MYLIB_BUILD_TESTS "Enable building tests" ON)
+if(MYLIB_BUILD_TESTS)
+  add_subdirectory(test/)
+endif()
+
 include(CPack)
 

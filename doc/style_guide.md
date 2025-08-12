@@ -2,25 +2,25 @@
 
 ## Contents
 
-- [Formatting](#formatting)
-  - [Alignment](#alignment)
-  - [Brackets](#brackets)
-  - [Characters Per Line](#characters-per-line)
-  - [Empty Lines](#empty-lines)
-  - [Indentation](#indentation)
-  - [Content Break](#content-break)
-  - [Spaces](#spaces)
-- [Naming](#naming)
-  - [Case](#case)
-  - [Suffix](#suffix)
-- [Documenting](#documenting)
-  - [Formatting](#documentation-formatting)
-  - [Tags](#tags)
-  - [Order](#order)
-  - [Spaces](#tags-spaces)
-  - [Dot](#dot)
-  - [Examples](#examples)
-
+ - [Formatting](#formatting)
+   - [Alignment](#alignment)
+   - [Brackets](#brackets)
+   - [Characters Per Line](#characters-per-line)
+   - [Empty Lines](#empty-lines)
+   - [Indentation](#indentation)
+   - [Content Break](#content-break)
+   - [Spaces](#spaces)
+ - [Naming](#naming)
+   - [Case](#case)
+   - [Suffix](#suffix)
+ - [Documenting](#documenting)
+   - [Formatting](#documentation-formatting)
+   - [Tags](#tags)
+   - [Order](#order)
+   - [Spaces](#tags-spaces)
+   - [Dot](#dot)
+   - [Examples](#examples)
+ 
 ## Formatting
 
 ### Alignment

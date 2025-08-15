@@ -10,8 +10,7 @@ target_compile_features(starterc PRIVATE c_std_23)
 target_compile_options(starterc PRIVATE
     $<$<C_COMPILER_ID:GNU,Clang>:-Werror;-Wall;-Wextra;-Wshadow;-Walloca;-Wcast-align;-Wcast-qual;-Wconversion;-Wdeprecated;-Wnull-dereference;-Wunreachable-code;-Wpedantic;>
     $<$<C_COMPILER_ID:Clang>:-Warray-bounds-pointer-arithmetic;-Wassign-enum;-Watomic-implicit-seq-cst;-Wbitwise-op-parentheses;-Wcompound-token-split-by-space;-Wconditional-uninitialized;-Wdelimited-escape-sequence-extension;-Wmost;>
-    $<$<C_COMPILER_ID:GNU>:-Wmisleading-indentation;-Wduplicated-cond;-Wduplicated-branches;-Wlogical-op;-Wuseless-cast;>
-    $<$<C_COMPILER_ID:MSVC>:/WX;/W4;/w14640;/w14242;/w14254;/w14263;/w14265;/w14287;/we4289;/w14296;/w14311;/w14545;/w14546;/w14547;/w14549;/w14555;/w14619;/w14640;/w14826;/w14905;/w14906;/w14928;>
+    $<$<C_COMPILER_ID:GNU>:-Wmisleading-indentation;-Wduplicated-cond;-Wduplicated-branches;-Wlogical-op;>
 )
 
 option(STARTERC_CLANG_TIDY "Enable clang-tidy during the build process" OFF)

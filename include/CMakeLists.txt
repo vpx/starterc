@@ -1,6 +1,6 @@
 target_sources(
     starterc
     PRIVATE
-    mylib.c
+    mylib.h
 )
 

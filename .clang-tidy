@@ -65,7 +65,22 @@ Checks: >
   -modernize-use-default-member-init,
   -performance-no-int-to-ptr,
   -bugprone-suspicious-stringview-data-usage,
-  -cert-dcl58-cpp
+  -modernize-use-auto,
+  -modernize-avoid-c-arrays,
+  -modernize-use-nullptr,
+  -cppcoreguidelines-pro-type-member-init,
+  -cppcoreguidelines-owning-memory,
+  -cppcoreguidelines-special-member-functions,
+  -cppcoreguidelines-avoid-c-arrays,
+  -hicpp-*,
+  -clang-analyzer-cplusplus*,
+  -cert-dcl58-cpp,
+  -cert-err58-cpp,
+  -google-runtime-operator,
+  -google-readability-casting,
+  -misc-non-private-member-variables-in-classes,
+  -misc-use-anonymous-namespace,
+  -readability-uppercase-literal-suffix
 CheckOptions:
   cppcoreguidelines-pro-type-const-cast.StrictMode: true
   misc-include-cleaner.IgnoreHeaders: '.*/(pch|stdafx)\.h(pp)?$'

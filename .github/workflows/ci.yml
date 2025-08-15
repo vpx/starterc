@@ -25,6 +25,7 @@ jobs:
             os: windows-2022
             timeout-minutes: 30
             configure: >
+              -G Ninja
               -DCMAKE_C_COMPILER=gcc
               -DCMAKE_CXX_COMPILER=g++
             build: --parallel

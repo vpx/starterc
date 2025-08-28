@@ -26,8 +26,6 @@ target_include_directories(starterc
 
 add_subdirectory(src/)
 
-include(FetchContent)
-
 option(STARTERC_BUILD_TESTS "Enable building tests" ON)
 if(STARTERC_BUILD_TESTS)
     include(CTest)

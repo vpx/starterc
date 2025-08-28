@@ -80,10 +80,10 @@ Checks: >
   -google-readability-casting,
   -misc-non-private-member-variables-in-classes,
   -misc-use-anonymous-namespace,
-  -readability-uppercase-literal-suffix
+  -readability-uppercase-literal-suffix,
+  -misc-include-cleaner
 CheckOptions:
   cppcoreguidelines-pro-type-const-cast.StrictMode: true
-  misc-include-cleaner.IgnoreHeaders: '.*/(pch|stdafx)\.h(pp)?$'
   modernize-use-default-member-init.UseAssignment: true
   performance-for-range-copy.WarnOnAllAutoCopies: true
   readability-identifier-naming.AbstractClassCase: 'lower_case'
